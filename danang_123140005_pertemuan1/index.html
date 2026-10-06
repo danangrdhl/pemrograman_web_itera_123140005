@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini POS - Kasir & Keranjang Belanja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>🛒 Mini POS</h1>
+    <p>Kasir Kantin / Toko Kampus</p>
+  </header>
+
+  <main class="container">
+    <!-- Form input barang -->
+    <section class="card" aria-labelledby="judul-form">
+      <h2 id="judul-form">Tambah Barang</h2>
+      <form id="form-barang" novalidate>
+        <div class="form-group">
+          <label for="nama-barang">Nama Barang</label>
+          <input type="text" id="nama-barang" placeholder="Contoh: Buku Tulis" autocomplete="off">
+          <small class="error" id="error-nama"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="harga-barang">Harga Satuan (Rp)</label>
+          <input type="number" id="harga-barang" placeholder="Minimal 500" step="any">
+          <small class="error" id="error-harga"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="qty-barang">Jumlah (Qty)</label>
+          <input type="number" id="qty-barang" placeholder="Minimal 1" step="any">
+          <small class="error" id="error-qty"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">+ Tambah ke Keranjang</button>
+      </form>
+    </section>
+
+    <!-- Tabel keranjang -->
+    <section class="card" aria-labelledby="judul-keranjang">
+      <h2 id="judul-keranjang">Keranjang Belanja</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Barang</th>
+              <th class="right">Harga Satuan</th>
+              <th class="center">Qty</th>
+              <th class="right">Subtotal</th>
+              <th class="center">Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="isi-keranjang"></tbody>
+        </table>
+      </div>
+      <p id="keranjang-kosong" class="empty">Keranjang masih kosong.</p>
+    </section>
+
+    <!-- Kalkulator -->
+    <section class="card" aria-labelledby="judul-ringkasan">
+      <h2 id="judul-ringkasan">Ringkasan Pembayaran</h2>
+
+      <div class="summary-row">
+        <span>Total Belanja</span>
+        <strong id="total-belanja">Rp 0</strong>
+      </div>
+
+      <div class="form-group">
+        <label for="kode-promo">Kode Promo (opsional)</label>
+        <input type="text" id="kode-promo" placeholder="Contoh: HEMAT10" autocomplete="off">
+        <small class="info" id="info-promo">Diskon 10% otomatis jika total belanja ≥ Rp 50.000.</small>
+      </div>
+
+      <div class="summary-row">
+        <span>Diskon</span>
+        <strong id="nominal-diskon" class="diskon">- Rp 0</strong>
+      </div>
+
+      <div class="summary-row total">
+        <span>Total Akhir</span>
+        <strong id="total-akhir">Rp 0</strong>
+      </div>
+
+      <div class="form-group">
+        <label for="uang-bayar">Uang Bayar (Rp)</label>
+        <input type="number" id="uang-bayar" placeholder="Masukkan nominal uang diterima" min="0">
+      </div>
+
+      <div class="summary-row">
+        <span>Kembalian</span>
+        <strong id="kembalian">Rp 0</strong>
+      </div>
+      <p id="status-bayar" class="status"></p>
+
+      <button type="button" id="btn-reset" class="btn btn-danger">Transaksi Baru / Reset</button>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small>Praktikum Pemrograman Aplikasi Web - Pertemuan 1</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
