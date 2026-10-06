@@ -76,15 +76,15 @@ Tujuan pembuatan aplikasi ini adalah menerapkan tiga kompetensi dasar praktikum:
 
 **1. Tampilan form input utama**
 
-![Form Input](screenshot/form-input.png)
+![Form Input](form-input.png)
 
 **2. Tampilan saat validasi error muncul**
 
-![Validasi Error](screenshot/validasi-error.png)
+![Validasi Error](validasi-error.png)
 
 **3. Tampilan hasil perhitungan kalkulator dan tabel keranjang**
 
-![Hasil Perhitungan](screenshot/hasil-perhitungan.png)
+![Hasil Perhitungan](hasil-perhitungan.png)
 
 ## Penjelasan Teknis Singkat
 
