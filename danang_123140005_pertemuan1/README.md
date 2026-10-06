@@ -4,9 +4,9 @@
 
 | | |
 |---|---|
-| **Nama Lengkap** | [ISI NAMA LENGKAP] |
-| **NIM** | [ISI NIM] |
-| **Kelas Praktikum** | [ISI KELAS: RA / RB] |
+| **Nama Lengkap** | [Danang Ridho Laksono] |
+| **NIM** | [123140005] |
+| **Kelas Praktikum** | [ISI KELAS:RB] |
 
 ## Deskripsi Aplikasi
 
