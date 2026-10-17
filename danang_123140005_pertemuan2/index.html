@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Mahasiswa ITERA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Dashboard Mahasiswa ITERA</p>
+      <h1 id="greeting">Halo!</h1>
+      <p id="tanggal" class="hero-date"></p>
+    </div>
+    <div id="jam" class="clock" aria-live="off">00:00:00</div>
+  </header>
+
+  <main class="layout">
+    <!-- Widget atas: cuaca, kutipan, progres -->
+    <section class="widgets">
+      <article class="card widget">
+        <h2>Cuaca Kampus ITERA</h2>
+        <div id="weather" class="widget-body"><p class="muted">Memuat cuaca...</p></div>
+      </article>
+
+      <article class="card widget">
+        <h2>Kutipan Hari Ini</h2>
+        <div id="quote" class="widget-body"><p class="muted">Memuat kutipan...</p></div>
+        <button type="button" id="btn-quote" class="btn btn-ghost">Kutipan lain</button>
+      </article>
+
+      <article class="card widget">
+        <h2>Progres Tugas</h2>
+        <div id="stats" class="widget-body"></div>
+      </article>
+    </section>
+
+    <!-- Manajer tugas -->
+    <section class="card tasks">
+      <h2 id="form-title">Tambah Tugas Kuliah</h2>
+
+      <form id="task-form" novalidate>
+        <div class="field wide">
+          <label for="input-title">Judul Tugas</label>
+          <input type="text" id="input-title" name="title" placeholder="Contoh: Laporan praktikum Sistem Tenaga" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="input-course">Mata Kuliah</label>
+          <input type="text" id="input-course" name="course" placeholder="Contoh: Pemrograman Web" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="input-deadline">Tenggat</label>
+          <input type="date" id="input-deadline" name="deadline">
+        </div>
+        <div class="field">
+          <label for="input-priority">Prioritas</label>
+          <select id="input-priority" name="priority">
+            <option value="rendah">Rendah</option>
+            <option value="sedang" selected>Sedang</option>
+            <option value="tinggi">Tinggi</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="btn-submit" class="btn btn-primary">Tambah Tugas</button>
+          <button type="button" id="btn-cancel" class="btn btn-ghost" hidden>Batal</button>
+        </div>
+        <p id="form-error" class="form-error" role="alert"></p>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tugas">
+          <button type="button" class="filter-btn active" data-filter="semua">Semua</button>
+          <button type="button" class="filter-btn" data-filter="aktif">Belum Selesai</button>
+          <button type="button" class="filter-btn" data-filter="selesai">Selesai</button>
+        </div>
+        <button type="button" id="btn-clear" class="btn btn-ghost btn-small">Hapus yang selesai</button>
+      </div>
+
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Praktikum Pemrograman Aplikasi Web, Pertemuan 2: JavaScript Next Gen (ES6+)</small>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
