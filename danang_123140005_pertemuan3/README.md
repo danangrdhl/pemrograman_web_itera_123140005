@@ -218,16 +218,3 @@ npm run preview
 ```
 
 ---
-
-## Rincian Hasil Unit Testing
-
-Pengujian diimplementasikan menggunakan **Vitest** dan **React Testing Library** mencakup 5 berkas pengujian dengan total **15 pengujian**:
-
-| Berkas Pengujian | Jumlah Pengujian | Fitur yang Diuji | Status |
-|---|:---:|---|:---:|
-| `useLocalStorage.test.js` | 3 | Default fallback, inisialisasi dari localStorage, reaktifitas update setter | **PASSED** |
-| `useBookStats.test.js` | 2 | Perhitungan edge case daftar kosong, total buku, rasio persentase, ranking penulis | **PASSED** |
-| `BookFilter.test.jsx` | 3 | Render counter badge, pengetikan query pencarian, klik tab pemfilteran status | **PASSED** |
-| `BookList.test.jsx` | 3 | Tampilan empty state, render info kartu buku, pemanggilan aksi edit & hapus | **PASSED** |
-| `BookForm.test.jsx` | 4 | Conditional rendering, error handling validasi input kosong, submit payload valid, mode edit | **PASSED** |
-| **Total** | **15 Pengujian** | Seluruh spesifikasi wajib | **100% Lolos** |
